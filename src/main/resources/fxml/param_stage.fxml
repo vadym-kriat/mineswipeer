@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ParamStageController">
+    <children>
+        <Label layoutX="47.0" layoutY="34.0" text="Level" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0" />
+        <VBox layoutX="17.0" layoutY="50.0" prefWidth="120.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0">
+            <children>
+                <RadioButton mnemonicParsing="false" selected="true" text="Easy (10 mines)" userData="EASY">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="tgLevel" />
+                    </toggleGroup>
+                </RadioButton>
+                <Label text="Field 9x9">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="22.0" />
+                    </VBox.margin>
+                </Label>
+                <RadioButton mnemonicParsing="false" text="Normal(40 mines)" toggleGroup="$tgLevel" userData="NORMAL" />
+                <Label text="Field 16x16">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="22.0" />
+                    </VBox.margin>
+                </Label>
+                <RadioButton mnemonicParsing="false" text="Hard(99 mines)" toggleGroup="$tgLevel" userData="HARD" />
+                <Label text="Field 16x30">
+                    <VBox.margin>
+                        <Insets left="22.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </VBox>
+        <VBox fx:id="vbCustomParam" layoutX="186.0" layoutY="37.0" prefWidth="140.0" spacing="19.0" AnchorPane.bottomAnchor="93.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+            <children>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label text="Height (9x250)" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets top="2.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfHeight" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox spacing="14.0">
+                    <children>
+                        <Label text="Width (9x250)" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets top="2.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfWidth" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox spacing="18.0">
+                    <children>
+                        <Label text="Mines (2^14)" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets top="2.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tfNumOfMine" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button fx:id="btnCancel" layoutX="28.0" layoutY="255.0" mnemonicParsing="false" prefWidth="60.0" text="Cancel" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+        <Button fx:id="btnOK" defaultButton="true" layoutX="38.0" layoutY="265.0" mnemonicParsing="false" prefWidth="60.0" text="OK" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+          <RadioButton layoutX="160.0" layoutY="50.0" mnemonicParsing="false" text="Custom" toggleGroup="$tgLevel" userData="CUSTOM" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="50.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainStageController">
+    <children>
+    <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+            <Menu fx:id="mGame" mnemonicParsing="false" text="Game">
+            </Menu>
+            <Menu fx:id="mZoom" mnemonicParsing="false" text="Zoom">
+            </Menu>
+            <Menu fx:id="mHelp" mnemonicParsing="false" text="Help">
+            </Menu>
+        </menus>
+    </MenuBar>
+
+    <ScrollPane fx:id="scrollPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+    </ScrollPane>
+    </children>
+</AnchorPane>
